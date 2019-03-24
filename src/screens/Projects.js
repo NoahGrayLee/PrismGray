@@ -16,46 +16,39 @@ import styled from 'styled-components'
 
 // 5. Static Resources
 
-
 //-----*-----*-----*-----*-----*-----//
 
 const projectList = [
   {
-    projId: "2019-1",
-    title: "마녀의 숨결",
-    description: "마녀의 숨결은...",
-    img: "IMG_witchperfume_1.JPG"
+    projId: '2019-1',
+    title: '마녀의 숨결',
+    description: '마녀의 숨결은...',
+    img: 'IMG_witchperfume_1.JPG'
   },
   {
-    projId: "2019-2",
-    title: "마녀의 처방약",
-    description: "마녀의 처방약은...",
-    img: "IMG_gemstone_bg.JPG"
+    projId: '2019-2',
+    title: '마녀의 처방약',
+    description: '마녀의 처방약은...',
+    img: 'IMG_gemstone_bg.JPG'
   }
 ]
 
 const Projects = () => (
-
-    <StyledProjects>
+  <StyledProjects>
     <Layout>
       {/* <div className="menu-title-container">
         <div className="menu-title">PROJECTS</div>
         <div className="menu-subtitle">Prism Gray Project List</div>
       </div> */}
       <div className="F-wrap">
-        {projectList.map((item) => {
-          return <Card props={item} />
+        {projectList.map(item => {
+          return <Card item={item} />
         })}
       </div>
     </Layout>
   </StyledProjects>
-
 )
 
-
-
-const StyledProjects =  styled.div`
-
-`
+const StyledProjects = styled.div``
 
 export default Projects

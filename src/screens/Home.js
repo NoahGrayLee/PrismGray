@@ -16,10 +16,10 @@ import PrayLogo from '../assets/public_asset/PrayLogo'
 
 //-----*-----*-----*-----*-----*-----//
 
-const LinkDot = (props) => {
+const LinkDot = props => {
   return (
     <Link to={props.moveTo} className="FCC menu-item">
-      <div className="link-dot"></div>
+      <div className="link-dot" />
       <p className="menu-title">{props.linkTitle}</p>
     </Link>
   )
@@ -30,19 +30,19 @@ const Home = () => (
     <div className="FCC">
       <PrayLogo w="130px" h="75px" className="logo" />
       <p className="title">PRISM GRAY</p>
-      <div className="horizontal-line"></div>
+      <div className="horizontal-line" />
       <div className="FRSB menu-list">
         <LinkDot linkTitle="PROJECT" moveTo="/Projects" />
         <LinkDot linkTitle="PRODUCT" moveTo="/Products" />
         <LinkDot linkTitle="ABOUT" moveTo="/About" />
         <LinkDot linkTitle="MOHM" moveTo="/Mohm" />
         <LinkDot linkTitle="NOAH" moveTo="/Noah" />
-      </div>  
+      </div>
     </div>
   </StyledHome>
 )
 
-const StyledHome =  styled.div`
+const StyledHome = styled.div`
   width: 100vw;
   height: 100vh;
   font-weight: 100;
@@ -72,30 +72,27 @@ const StyledHome =  styled.div`
     & .menu-item {
       width: 100%;
       & .link-dot {
-      width: 8px;
-      height: 8px;
-      background-color: #fff;
-      border: 1px solid gray;
-      border-radius: 50%;
-      margin-bottom: 8px;
-      transition: 0.4s;
+        width: 8px;
+        height: 8px;
+        background-color: #fff;
+        border: 1px solid gray;
+        border-radius: 50%;
+        margin-bottom: 8px;
+        transition: 0.4s;
       }
       & .menu-title {
         font-size: 12px;
         letter-spacing: 10px;
         text-align: center;
         width: calc(100% - 9px);
-
       }
     }
     & .menu-item:hover {
       & .link-dot {
-      background-color: #1a1a1a;
+        background-color: #1a1a1a;
       }
     }
   }
-
-
 `
 
 export default Home

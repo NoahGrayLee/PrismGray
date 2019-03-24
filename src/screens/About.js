@@ -15,7 +15,6 @@ import styled from 'styled-components'
 
 // 5. Static Resources
 
-
 //-----*-----*-----*-----*-----*-----//
 
 const About = () => (
@@ -33,15 +32,12 @@ const About = () => (
 //   render() {
 //     return (
 //       <StyledAbout>
-// 
+//
 //       </StyledAbout>
 //     )
 //   }
 // }
 
-
-const StyledAbout =  styled.div`
-
-`
+const StyledAbout = styled.div``
 
 export default About

@@ -13,10 +13,9 @@ import styled from 'styled-components'
 
 // 5. Static Resources
 
-
 //-----*-----*-----*-----*-----*-----//
 
-const CategoryOfMember = (props) => (
+const CategoryOfMember = props => (
   <StyledCategoryOfMember>
     <div className="image-container FRC">Image Box</div>
     <div className="category-title FRC txt-h2">{props.title}</div>
@@ -27,14 +26,13 @@ const CategoryOfMember = (props) => (
 //   render() {
 //     return (
 //       <StyledCategoryOfMember>
-// 
+//
 //       </StyledCategoryOfMember>
 //     )
 //   }
 // }
 
-
-const StyledCategoryOfMember =  styled.div`
+const StyledCategoryOfMember = styled.div`
   min-width: 260px;
   min-height: 300px;
   border: 1px solid gray;
@@ -48,7 +46,6 @@ const StyledCategoryOfMember =  styled.div`
   & .category-title {
     width: 100%;
     height: 40px;
-
   }
 `
 
