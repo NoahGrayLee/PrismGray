@@ -12,38 +12,89 @@ import T from 'i18n-react'
 import styled from 'styled-components'
 
 // 5. Static Resources
-
+import PrayLogo from '../assets/public_asset/PrayLogo'
 
 //-----*-----*-----*-----*-----*-----//
 
+const LinkDot = (props) => {
+  return (
+    <Link to={props.moveTo} className="FCC menu-item">
+      <div className="link-dot"></div>
+      <p className="menu-title">{props.linkTitle}</p>
+    </Link>
+  )
+}
+
 const Home = () => (
-  <StyledHome>
-    <div className="FRSB menu-list">
-      <Link to="/Projects">Projects</Link>
-      <Link to="/Products">Products</Link>
-      <Link to="/About">About</Link>
-      <Link to="/Mohm">Mohm</Link>
-      <Link to="/Noah">Noah</Link>
+  <StyledHome className="FRC">
+    <div className="FCC">
+      <PrayLogo w="130px" h="75px" className="logo" />
+      <p className="title">PRISM GRAY</p>
+      <div className="horizontal-line"></div>
+      <div className="FRSB menu-list">
+        <LinkDot linkTitle="PROJECT" moveTo="/Projects" />
+        <LinkDot linkTitle="PRODUCT" moveTo="/Products" />
+        <LinkDot linkTitle="ABOUT" moveTo="/About" />
+        <LinkDot linkTitle="MOHM" moveTo="/Mohm" />
+        <LinkDot linkTitle="NOAH" moveTo="/Noah" />
+      </div>  
     </div>
   </StyledHome>
 )
 
-// class Home extends Component {
-//   render() {
-//     return (
-//       <StyledHome>
-// 
-//       </StyledHome>
-//     )
-//   }
-// }
-
-
 const StyledHome =  styled.div`
-  & .menu-list {
-    width: 100%;
-    padding: 5rem;
+  width: 100vw;
+  height: 100vh;
+  font-weight: 100;
+  color: #1a1a1a;
+  & .logo {
+    margin-left: 32px;
   }
+  & .title {
+    font-size: 14px;
+    letter-spacing: 12px;
+    padding-top: 20px;
+  }
+  & .horizontal-line {
+    height: 1px;
+    width: calc(100% - 26rem);
+    background-color: #1a1a1a;
+    position: absolute;
+    z-index: -1;
+    margin-top: 44px;
+  }
+  & .menu-list {
+    width: 100vw;
+    overflow: hidden;
+    padding: 5rem;
+
+    & .menu-item {
+      width: 100%;
+      & .link-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #fff;
+      border: 1px solid gray;
+      border-radius: 50%;
+      margin-bottom: 8px;
+      transition: 0.4s;
+      }
+      & .menu-title {
+        font-size: 12px;
+        letter-spacing: 10px;
+        text-align: center;
+        width: calc(100% - 9px);
+
+      }
+    }
+    & .menu-item:hover {
+      & .link-dot {
+      background-color: #1a1a1a;
+      }
+    }
+  }
+
+
 `
 
 export default Home
