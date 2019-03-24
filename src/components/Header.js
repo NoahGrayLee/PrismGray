@@ -1,7 +1,7 @@
 import React from 'react'
 
 // 1. Dependencies
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 // 2. i18n
 import T from 'i18n-react'
@@ -16,20 +16,38 @@ import styled from 'styled-components'
 //-----*-----*-----*-----*-----*-----//
 
 const Header = () => (
-  <StyledHeader>
-    <div className="header-container FRL">
-      <Link to="/">Prism Gray</Link>
+  <StyledHeader className="FRC">
+    <div className="header-container FRSB">
+      <NavLink to="/" className="menu-item" activeClassName="active-menu" exact>PRISM GRAY</NavLink>
+      <NavLink to="/Projects" className="menu-item" activeClassName="active-menu" exact>PROJECTS</NavLink>
+      <NavLink to="/Products" className="menu-item" activeClassName="active-menu" exact>PRODUCTS</NavLink>
+      <NavLink to="/About" className="menu-item" activeClassName="active-menu" exact>ABOUT</NavLink>
+      <NavLink to="/Mohm" className="menu-item" activeClassName="active-menu" exact>MOHM</NavLink>
+      <NavLink to="/Noah" className="menu-item" activeClassName="active-menu" exact>NOAH</NavLink>
     </div>
   </StyledHeader>
 )
 
 const StyledHeader =  styled.div`
   position: fixed;
-  width: 100%;
-  height: 40px;
-  background-color: #f0f0f0;
+  width: 100vw;
+  height: 56px;
+  font-weight: 100;
+  font-size: 10px;
   & .header-container {
-    max-width: 1440px;
+    width: 1440px;
+    padding: 0 5rem;
+  }
+  & .menu-item {
+    opacity: 0.2;
+    transition: 0.4s;
+    letter-spacing: 8px;
+  }
+  & .menu-item:hover {
+    opacity: 1;
+  }
+  & .active-menu {
+    opacity: 1;
   }
 `
 

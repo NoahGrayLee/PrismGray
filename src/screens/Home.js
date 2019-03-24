@@ -56,9 +56,10 @@ const StyledHome =  styled.div`
     padding-top: 20px;
   }
   & .horizontal-line {
-    height: 1px;
+    height: 0.4pt;
     width: calc(100% - 26rem);
-    background-color: #1a1a1a;
+    background-color: #000;
+    opacity: 0.4;
     position: absolute;
     z-index: -1;
     margin-top: 44px;

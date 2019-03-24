@@ -15,27 +15,22 @@ import styled from 'styled-components'
 
 //-----*-----*-----*-----*-----*-----//
 
-const Card = (props) => (
-  <StyledCard>
-    <div >
-      <img className="styledImage" src={require(`../../assets/product-images/${props.img}`)} alt={props.img} />
-    </div>
-    {props.title}
-    {props.description}
-    {props.children}
+const Card = (item) => {
+  console.log('props', item )
+  const { props } = item
+  return (
+    <StyledCard>
+    <Link to={`Projects/${props.projId}`}> 
+      <div>
+        <img className="styledImage" src={require(`../../assets/product-images/${props.img}`)} alt={props.img} />
+      </div>
+      {props.title}
+      {props.description}
+   </Link>
   </StyledCard>
-)
+  )
 
-// class Card extends Component {
-//   render() {
-//     return (
-//       <StyledCard>
-// 
-//       </StyledCard>
-//     )
-//   }
-// }
-
+    }
 
 const StyledCard =  styled.div`
   width: 300px;

@@ -15,7 +15,6 @@ import { Card } from '../components/common'
 import styled from 'styled-components'
 
 // 5. Static Resources
-import test from '../assets/images/test.png'
 
 
 //-----*-----*-----*-----*-----*-----//
@@ -36,47 +35,27 @@ const projectList = [
 ]
 
 const Projects = () => (
-  // const imgRender = () => {
-  //   return (
-  //     <div>
-  //       <img key={image} src={require(`./`)}
-  //     </div>
-  //   )
-  // }
-  // return (
+
     <StyledProjects>
     <Layout>
-      <div className="menu-title-container">
+      {/* <div className="menu-title-container">
         <div className="menu-title">PROJECTS</div>
         <div className="menu-subtitle">Prism Gray Project List</div>
-      </div>
+      </div> */}
       <div className="F-wrap">
         {projectList.map((item) => {
-          return <Card title={item.title} description={item.description} img={item.img} />
+          return <Card props={item} />
         })}
       </div>
     </Layout>
   </StyledProjects>
-  // )
 
 )
 
-// class Projects extends Component {
-//   render() {
-//     return (
-//       <StyledProjects>
-// 
-//       </StyledProjects>
-//     )
-//   }
-// }
 
 
 const StyledProjects =  styled.div`
-  & .img: {
-    width: 500px;
-    height: 500px;
-  }
+
 `
 
 export default Projects
